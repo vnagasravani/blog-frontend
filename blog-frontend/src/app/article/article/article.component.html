@@ -1,0 +1,64 @@
+<div class="container set">
+    <div class="card">
+      <h5 class="card-header text-center header " style="height:15%;background-color: #e3f2fd;">Blog Application</h5>
+      <div class="card-body">
+        <nav class="navbar navbar-expand-lg navbar-light rounded-pill " style="background-color: #e3f2fd;overflow: hidden;">
+    
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link btn  rounded-pill " style="color: #24a0ed;cursor: pointer; border:none;" routerLink="/dashboard" [routerLinkActive]="['active']">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn  rounded-pill " style="color: #24a0ed;cursor: pointer; border:none;" routerLink="/create" [routerLinkActive]="['active']">Add a blog</a>
+
+              </li>
+            </ul>  
+
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link btn  rounded-pill " style="color: #24a0ed;cursor: pointer; border:none;" (click)="logout()">logout</a>
+              </li>
+            </ul>  
+          </div>
+        </nav>
+        <div class="container" style="text-align:center">
+            <!-- <div class="row" style="text-align:center">
+                <div class="col-md-12" style="font-size:22px">All Blogs </div>
+                <br><br><br><br>
+            </div> -->
+            <div class="row" style="text-align:center">
+            <div *ngFor="let blog of blogs" class="col-md-4 cards">
+                <div class="card text-center icard name-color">
+                    <div class="card-header">
+                        {{blog.title}}
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">{{blog.body}}</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Posted on {{blog.createdOn | date}}<br />by{{blog.author}}
+                    </div>
+                </div>
+                <br />
+            </div>
+        </div>
+        </div>
+        
+        
+      </div>
+    </div>
+    
+  
+    <div>
+      
+  
+  </div>
+  
+  
+
+

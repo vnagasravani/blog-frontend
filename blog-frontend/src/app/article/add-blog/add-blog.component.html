@@ -1,0 +1,95 @@
+<div class="container">
+
+
+</div>
+
+
+
+
+<div class="container set">
+    <div class="card">
+        <h5 class="card-header text-center header " style="height:15%;background-color: #e3f2fd;">Blog Application</h5>
+        <div class="card-body">
+            <nav class="navbar navbar-expand-lg navbar-light rounded-pill "
+                style="background-color: #e3f2fd;overflow: hidden;">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link btn  rounded-pill " style="color: #24a0ed;cursor: pointer; border:none;"
+                                routerLink="/dashboard" [routerLinkActive]="['active']">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn  rounded-pill " style="color: #24a0ed;cursor: pointer; border:none;"
+                                routerLink="/create" [routerLinkActive]="['active']">Add a blog</a>
+
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="row" style="text-align:left">
+                <div class="col-md-8 m-auto">
+                    <form #createBlogForm="ngForm" (ngSubmit)="createBlog()">
+
+                        <span>Title </span>
+
+                        <label for="inputFirstName" class="sr-only">Title</label>
+
+                        <input type="text" name="fname" #name="ngModel" class="form-control bordere rounded-pill"
+                            [class.is-invalid]="name.invalid && name.touched" [(ngModel)]="title" placeholder="title"
+                            required autofocus autocomplete="off">
+                        <small class="text-danger" [class.d-none]="name.valid || name.untouched">title is
+                            Required</small>
+
+                        <br>
+
+                        <span>Author </span>
+
+                        <label class="sr-only">Author</label>
+
+                        <input type="text" name="inputLastName" #lname="ngModel"
+                            class="form-control bordere rounded-pill" autocomplete="off"
+                            [class.is-invalid]="lname.invalid && lname.touched" [(ngModel)]="author"
+                            placeholder="author" required>
+                        <small class="text-danger" [class.d-none]="lname.valid || lname.untouched">Author is
+                            Required</small>
+
+
+                        <br>
+
+                        <span>Description </span>
+
+                        <label class="sr-only">Description</label>
+
+                        <input type="text" name="inputLastName" #lname="ngModel"
+                            class="form-control bordere rounded-pill" autocomplete="off"
+                            [class.is-invalid]="lname.invalid && lname.touched" [(ngModel)]="body"
+                            placeholder="Description" required>
+                        <small class="text-danger" [class.d-none]="lname.valid || lname.untouched">Description is
+                            Required</small>
+
+
+
+
+                        <button type="submit" class="btn-block sign text-center" [disabled]="!createBlogForm.form.valid">Post the
+                            blog</button>
+                    </form>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div>
+
+
+    </div>

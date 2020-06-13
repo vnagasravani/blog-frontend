@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-default shadow" style="background-color: #e3f2fd; " >
+   <img src="./../../../assets/icon.jpg" height="50" width="60"> 
+  <a class="navbar-brand mr-auto"
+    style="color: #24a0ed;cursor: pointer; font-weight: 400; font-family: 'Times New Roman', Times, serif; "
+    [routerLink]="['/login']">
+    Blogger
+  </a>
+  <button class="navbar-toggler btn btn-outline-info" type="button" data-toggle="collapse"
+    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <i class="fas fa-bars" style="color: #189bba; "></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto"> </ul>
+    <button class="btn btn-outline-info my-2 my-sm-0 rounded-pill" style="margin-right: 20px;border: none;"
+      [routerLink]="['/signup']">
+      Signup <i class="fas fa-user-plus" style="color: #24a0ed;font-size:1em; "></i>
+    </button>
+  </div>
+</nav>
+<br><br><br>
+
+<div class="row p-0 m-0 set container m-auto">
+
+
+
+  <div class=" d-none d-sm-block col-sm-5 col-md-5 col-lg-5 col-xl-5 " >
+    <img src="/assets/blog1.jpeg" style="height:100%;
+                                        width:100%;
+                                       object-fit: cover;">
+  </div>
+
+  <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 m-auto">
+
+    <div class="col-12 text-center">
+      <h3 style="color: #24a0ed;font-family: 'Times New Roman', Times, serif;"><b>Sign In</b></h3>
+    </div>
+
+    <br>
+
+    <label for="inputEmail" class="sr-only">Email address</label>
+
+    <input type="email" id="inputEmail" class="form-control bordere rounded-pill" [(ngModel)]="email"
+      placeholder="Email address" required autofocus>
+
+    <br>
+
+    <label for="inputPassword" class="sr-only">Password</label>
+
+    <input type="password" id="inputPassword" class="form-control bordere rounded-pill " [(ngModel)]="password"
+      placeholder="Password" required>
+
+    <br>
+
+    <div class="col-xl-12 text-center">
+      <button type="button" (click)="signinFunction()" class="btn btn-outline-info shadow-lg rounded-pill animate"
+        style="width: 25%;"><b>Login
+          <i class="fas fa-sign-in-alt" style="color: #189bba; font-size: 1em;"></i></b></button>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-xl-12 text-center">
+        <button class="btn btn-link dec animate m-auto" (click)="resetPassword()" >Forgot Password?
+          <i class="fas fa-lock" style="color: #24a0ed; font-size:1em;"></i>
+        </button>
+        <button class="btn btn-link dec animate m-auto" (click)='goToSignUp()'>Create Your Account <i
+            class="fas fa-user-plus" style="color: #24a0ed; font-size:1em;"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>

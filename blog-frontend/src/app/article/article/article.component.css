@@ -1,0 +1,51 @@
+.set{
+   
+    border-radius:15px;
+    margin-top:1%;
+    margin-bottom:1%;
+    -webkit-box-shadow: 0px 2px 20px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 20px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 20px 1px rgba(0,0,0,0.75);
+     
+  
+  }
+
+  .container{
+      position: relative;
+      height:70%;
+      width:95%;
+  }
+
+  .header{
+    color:#24a0ed;
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 2em;
+   font-weight: 600;
+   margin-left: 2%;
+}
+
+.icard{
+    background: #e3f2fd;
+    border-radius: 15px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    color: #24a0ed;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    }
+
+    .cards{
+        padding:5px;
+        margin:auto;
+        
+    }
+
+    .active{
+        border-color: bisque;
+    }
+
+    .name-color{
+        -webkit-box-shadow: 0px 2px 12px -2px #24a0ed;
+        -moz-box-shadow: 0px 2px 12px -2px #24a0ed;
+        box-shadow: 0px 2px 12px -2px #24a0ed;
+      }

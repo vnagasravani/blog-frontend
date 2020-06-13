@@ -1,0 +1,133 @@
+
+<nav class="navbar navbar-expand-lg navbar-default shadow" style="background-color: #e3f2fd;">
+  <img src="./../../../assets/icon.jpg" height="50" width="60">
+  <a class="navbar-brand mr-auto" style="color: #24a0ed;cursor: pointer; font-weight: 400; font-family: 'Times New Roman', Times, serif; " [routerLink]="['/login']">
+       Blogger
+  </a>
+  <button class="navbar-toggler btn btn-outline-info" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="fas fa-bars" style="color: #189bba; "></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto"> </ul>
+      <button class="btn btn-outline-info my-2 my-sm-0 rounded-pill" style="margin-right: 20px;border: none;"
+          [routerLink]="['/login']">
+          Login <i class="fas fa-sign-in-alt" style="color: #189bba; font-size:1em; "></i>
+      </button>
+  </div>
+</nav>
+
+<br><br>
+<div class="container set">
+
+<div class="row p-0 m-0">
+
+   <div class=" d-none d-sm-block col-sm-4 col-md-4 col-lg-4 col-xl-4 "  >
+    <img src="./assets/signup.jpg">
+  </div>
+
+
+  <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 m-auto">
+
+    <div class="col-12 text-center">
+      <h3 style="color: #24a0ed;font-family: 'Times New Roman', Times, serif;"><b>Sign Up</b></h3>
+    </div>
+
+    <br>
+
+    <form #signupform="ngForm" (ngSubmit)="signupform.reset()">
+
+  
+      <span>FirstName </span>
+
+      <label for="inputFirstName" class="sr-only">FirstName</label>
+
+      <input type="text" name="fname" #name="ngModel" class="form-control bordere rounded-pill"
+        [class.is-invalid]="name.invalid && name.touched" [(ngModel)]="firstName" placeholder="FirstName" required
+        autofocus autocomplete="off">
+      <small class="text-danger" [class.d-none]="name.valid || name.untouched">First Name is Required</small>
+
+      <br>
+
+      <span>LastName </span>
+
+      <label for="inputLastName" class="sr-only">LastName</label>
+
+      <input type="text" name="inputLastName" #lname="ngModel" class="form-control bordere rounded-pill" autocomplete="off"
+        [class.is-invalid]="lname.invalid && lname.touched" [(ngModel)]="lastName" placeholder="LastName" required>
+      <small class="text-danger" [class.d-none]="lname.valid || lname.untouched">Last Name is Required</small>
+
+
+      <br>
+
+      <!-- <span>Country </span>
+
+      <label for="inputCountry" class="sr-only">Country: </label>
+      <select [(ngModel)]="country" name="country" class="form-control bordere rounded-pill"  #inputCountry="ngModel" (click)="onChangeOfCountry()"
+        required [class.is-invalid]="inputCountry.invalid && inputCountry.touched" autocomplete="off">
+        <option *ngFor="let country of countries" [value]="country.code">{{country.name}}</option>
+      </select>
+      <small class="text-danger" [class.d-none]="inputCountry.valid || inputCountry.untouched">choose one country</small>
+
+
+      <br> -->
+      <span>Mobile </span>
+
+      <label for="inputMobile" class="sr-only">Mobile</label>
+
+
+      <input type="tel" name="inputMobile" #contact="ngModel" pattern="^\d{10}$" class="form-control bordere rounded-pill"
+        [class.is-invalid]="contact.invalid && contact.touched" [(ngModel)]="mobile" placeholder="Mobile" required autocomplete="off">
+      <small class="text-danger" [class.d-none]="contact.valid || contact.untouched">Mobilenumber is required and it
+        should contain 10 digits</small>
+
+
+      <br>
+
+      <span>Email </span>
+
+      <label for="inputEmail" class="sr-only">Email address</label>
+
+      <input type="email" name="inputEmail" #mail="ngModel" class="form-control bordere rounded-pill" [(ngModel)]="email"
+        [class.is-invalid]="mail.invalid && mail.touched" placeholder="Email address" required autocomplete="off">
+      <small class="text-danger" [class.d-none]="mail.valid || mail.untouched">email is Required</small>
+
+
+
+      <br>
+
+      <span>Password </span>
+
+      <label for="inputPassword" class="sr-only">Password</label>
+
+
+      
+      <input type="password" name="inputPassword" #pword="ngModel" [class.is-invalid]="pword.invalid && pword.touched"
+        class="form-control bordere rounded-pill " [(ngModel)]="password" placeholder="Password" required>
+        
+      <small class="text-danger" [class.d-none]="pword.valid || pword.untouched">password is Required</small>
+      
+      <br>
+      
+      <div >
+      <button class="btn-block sign text-center" [disabled]="signupform.form.invalid" type="submit" (click)="signupFunction()">Signup  <i class="fas fa-user-plus"  style="color: #5dde8f; font-size:1em "></i></button> 
+      </div>
+
+      <br>
+      
+      <div class="row">
+        <div class="col-12 text-center">
+            <button type="button" style="margin: auto;" class="btn btn-link "
+                [routerLink]="['/login']">Back
+                to Login <i class="fas fa-sign-in-alt" style="color: #189bba; font-size:1em; "></i></button>
+        </div>
+    </div>
+    </form>
+  </div>
+
+  
+</div>
+</div>
+<br><br>
